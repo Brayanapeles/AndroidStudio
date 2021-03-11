@@ -11,22 +11,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Peso:"
+        android:text="@string/peso"
         android:gravity="center"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start"
+        android:textColor="@color/colorlabelText"/>
 
     <EditText
         android:id="@+id/edit_peso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="Seu peso, ex: 55.500"/>
+        android:hint="Seu peso, ex: 55.500" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Altura:"
-        android:layout_marginTop="48dp"/>
+        android:text="@string/altura"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/colorlabelText"/>
 
     <EditText
         android:id="@+id/edit_altura"
@@ -36,12 +38,27 @@
         android:hint="Sua Altura, ex: 1.60"
         android:layout_marginBottom="48dp"/>
 
-    <Button
-        android:id="@+id/button_calcular"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:background="#ff7a17"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_calcular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:layout_weight="3"/>
+
+        <Button
+            android:id="@+id/button_limpar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Limpar"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/text_resultado"
